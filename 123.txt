@@ -1,22 +1,12 @@
-## 安裝 cachyos-repo
-curl -O https://mirror.cachyos.org/cachyos-repo.tar.xz
-tar xvf cachyos-repo.tar.xz
-cd cachyos-repo/
-sudo ./cachyos-repo.sh
-sudo vim /etc/pacman.conf
-sudo pacman -Syyu
-
-## 安裝字體、字體設定
+## 字體、字體設定
 sudo pacman -S paru
 curl -O https://hak53q.github.io/install.sh && bash ./install.sh 
 paru -S fontconfig-ubuntu ttf-fira-code ttf-fira-mono noto-fonts-cjk noto-fonts-cjk-glyph-conf noto-fonts-cjk-locale-conf
 
-## 安裝驅動、桌面、瀏覽器
+## 驅動、桌面、瀏覽器
 sudo pacman -S dkms libva-nvidia-driver nvidia-open-dkms nvidia-utils intel-media-driver libva-intel-driver vulkan-intel mesa libva-mesa-driver
 sudo pacman -S gnome gnome-tweaks firefox firefox-i18n-zh-tw
 
-paru -S mutter-x11-scaling
-gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling']"
 gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <2>}]"
 gsettings set org.gnome.desktop.interface scaling-factor 2
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer', 'xwayland-native-scaling']"
