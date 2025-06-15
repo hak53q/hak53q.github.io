@@ -1,6 +1,6 @@
 #!/bin/bash
 
-url="https://github.com/hak53q/Plangothic"
+url="https://github.com/hak53q/plangothic-pkgbuild"
 dir="$HOME/Plangothic"
 cyan=$(tput setaf 6)
 reset=$(tput sgr0)
