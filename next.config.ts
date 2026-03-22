@@ -1,14 +1,17 @@
 import nextra from "nextra";
 
-const nextConfig = {
-  output: 'export',
+const withNextra = nextra({
+  theme: "nextra-theme-docs",
+  themeConfig: "./theme.config.tsx",
+});
+
+export default withNextra({
+  output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: '',
-};
+  basePath: "",
 
-export default withNextra({
   async redirects() {
     return [
       {
@@ -20,6 +23,7 @@ export default withNextra({
         source: "/en/:slug*",
         destination: "/:slug*",
         permanent: true,
-      }]
-  }
+      },
+    ];
+  },
 });
