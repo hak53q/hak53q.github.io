@@ -1,0 +1,5 @@
+_pagefind/
+public/_pagefind/
+out/_pagefind/
+node_modules/
+.next/
