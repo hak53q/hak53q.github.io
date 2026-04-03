@@ -10,7 +10,7 @@ export const metadata = {
  
 const navbar = (
   <Navbar
-    logo={<b>hak53q notes</b>}
+    logo={<b>\> hak53q FYI</b>}
     // ... Your additional navbar options
   />
 )
