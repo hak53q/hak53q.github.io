@@ -10,17 +10,17 @@ export const metadata = {
  
 const navbar = (
   <Navbar
-    logo={<b>Nextra</b>}
+    logo={<b>hak53q notes</b>}
     // ... Your additional navbar options
   />
 )
-const footer = <Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>
+const footer = <Footer>MIT © {new Date().getFullYear()} hak53q</Footer>
  
 export default async function RootLayout({ children }) {
   return (
     <html
       // Not required, but good for SEO
-      lang="en"
+      lang="zh-Hant"
       // Required to be set
       dir="ltr"
       // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
@@ -45,3 +45,4 @@ export default async function RootLayout({ children }) {
     </html>
   )
 }
+// Nextra 範例複製來的
