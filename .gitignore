@@ -1,5 +1,5 @@
-_pagefind/
-public/_pagefind/
+.next
+node_modules
+.codex
+next-env.d.ts
 out/
-node_modules/
-.next/

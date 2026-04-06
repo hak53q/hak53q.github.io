@@ -1,17 +1,13 @@
-import nextra from 'nextra'
- 
-// Set up Nextra with its configuration
+import nextra from "nextra";
+
 const withNextra = nextra({
-  // ... Add Nextra-specific options here
-})
- 
-// Export the final Next.js config with Nextra included
+  theme: "nextra-theme-docs",
+  themeConfig: "./theme.config.tsx",
+});
+
 export default withNextra({
-  output: 'export',
-  turbopack: {
-    resolveAlias: {
-      // Path to your `mdx-components` file with extension
-      'next-mdx-import-source-file': './mdx-components.tsx'
-    }
-  }
-})
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+});
