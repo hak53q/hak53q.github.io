@@ -1,27 +1,25 @@
-import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
+import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
-import './global.css'
 import 'nextra-theme-docs/style.css'
+import './global.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Docs Template',
-    template: '%s | Docs Template'
+    default: 'hak53q',
+    template: '%s | hak53q'
   },
-  description: 'A minimal documentation site template.',
-  applicationName: 'Docs Template'
+  description: '不知道做什麼用？',
+  applicationName: 'hak53q'
 }
-
 const navbar = (
   <Navbar
-    logo={<span>Docs Template</span>}
-    projectLink="https://github.com/ericx20/zz-method-docs"
+    logo={<b># hak53q</b>}
+    projectLink="https://github.com/hak53q/hak53q.github.io"
   />
 )
 
-const footer = <Footer>Built with Nextra</Footer>
+const footer = <Footer style={{ fontSize: 'small' }}> CC BY 4.0 {new Date().getFullYear()} © hak53q.</Footer>
 
 export default async function RootLayout({
   children
@@ -29,21 +27,21 @@ export default async function RootLayout({
   children: ReactNode
 }>) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html lang="zh-Hant" dir="ltr" suppressHydrationWarning>
       <body>
-        <div style={{ paddingInline: '12%' }}>
-          <Layout
-            navbar={navbar}
-            pageMap={await getPageMap()}
-            docsRepositoryBase="https://github.com/ericx20/zz-method-docs/tree/main/docs-new"
-            feedback={{ content: 'Question? Give feedback →' }}
-            editLink="Edit this page"
-            footer={footer}
-            toc={{ title: 'On This Page', backToTop: 'Scroll to top' }}
-          >
+        <Layout
+          navbar={navbar}
+          pageMap={await getPageMap()}
+          docsRepositoryBase="https://github.com/ericx20/zz-method-docs/tree/main/docs-new"
+          feedback={{ content: 'Question? Give feedback' }}
+          editLink={null}
+          footer={footer}
+          toc={{ title: 'On This Page', backToTop: 'Scroll to top' }}
+        >
+          <div style={{ paddingInline: '3%' }}>
             {children}
-          </Layout>
-        </div>
+          </div>
+        </Layout>
       </body>
     </html>
   )
