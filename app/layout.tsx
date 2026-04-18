@@ -29,19 +29,21 @@ export default async function RootLayout({
   children: ReactNode
 }>) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning style={{ paddingInline: '12%' }}>
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <body>
-        <Layout
-          navbar={navbar}
-          pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/ericx20/zz-method-docs/tree/main/docs-new"
-          feedback={{ content: 'Question? Give feedback →' }}
-          editLink="Edit this page"
-          footer={footer}
-          toc={{ title: 'On This Page', backToTop: 'Scroll to top' }}
-        >
-          {children}
-        </Layout>
+        <div style={{ paddingInline: '12%' }}>
+          <Layout
+            navbar={navbar}
+            pageMap={await getPageMap()}
+            docsRepositoryBase="https://github.com/ericx20/zz-method-docs/tree/main/docs-new"
+            feedback={{ content: 'Question? Give feedback →' }}
+            editLink="Edit this page"
+            footer={footer}
+            toc={{ title: 'On This Page', backToTop: 'Scroll to top' }}
+          >
+            {children}
+          </Layout>
+        </div>
       </body>
     </html>
   )

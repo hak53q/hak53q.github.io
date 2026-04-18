@@ -2,4 +2,5 @@
 .codex
 node_modules
 next-env.d.ts
-out/
+_pagefind/
+out/ 
